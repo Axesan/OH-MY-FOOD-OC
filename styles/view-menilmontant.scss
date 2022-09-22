@@ -1,0 +1,150 @@
+$color-white:white;
+$color-black:#000;
+$bg-grey: rgba(163, 163, 163, 0.688); 
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+// fontawesome 
+@import "./fontawesome/scss/fontawesome.scss";
+
+@import "./fontawesome/scss/solid.scss";
+@import "./fontawesome/scss/brands.scss";
+@import "./fontawesome/scss/regular.scss";
+
+*{
+    font-family: 'Roboto';
+}
+.--dark{
+    background-color: rgb(31, 29, 29);
+}
+.mt {
+    margin-top: 20px;
+}
+
+.title_command{
+    border-bottom: 2px solid #66ff99;
+    width: 65px;
+    padding-bottom: 10px;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+// Header
+header{
+    background-color: $color-white;
+    width: 100%;
+    text-align: center;
+    box-shadow: 10px 0px 10px;
+    i{
+        position: relative;
+        right: 50px;
+        cursor: pointer;
+        color: #000;
+        &:hover{
+            color: #9356DC;
+        }
+    }
+
+    .header__img{
+       width: 50%;
+       padding: 15px;
+      
+    }
+}
+.background_img{
+    
+    background-image: url("../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background-position: center center;
+    object-fit:cover;
+    background-size: 100%;
+    padding: 20%;
+}
+
+// main 
+main{
+    background-color:whitesmoke;
+
+    border-radius: 30px;
+    padding: 20px;
+    position: relative;
+    bottom: 50px;
+    h1{
+        display: flex;
+        justify-content: space-between;
+        font-weight: 900;
+    }
+
+    .contend{
+        margin-top: 50px;
+        
+        .bloc{
+            width: 100%;
+            margin-top: 45px;
+         
+        .bloc__items{
+
+            background-color: $color-white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            border-radius: 20px;
+            margin-top: 10px;
+            box-shadow: 6px 6px 6px #dfdfdf;
+            cursor: pointer;
+
+            &:hover{
+                color: #9356DC;
+            }
+            .bloc__body{
+                margin: 20px;
+                font-size: smaller;
+            }.command_success{
+                 
+                cursor: pointer;
+                background-color: #66ff99;
+                border-radius: 0px 20px 20px 0px;
+                display: none;
+            }
+            .price{
+                font-weight: bold;
+                padding: 10px;
+            }
+            i{
+               
+                margin: 25px;
+            }
+            
+            p{
+                font-weight: lighter;
+            }
+        }
+
+        }
+    }
+}
+
+
+// Footer 
+footer{
+    margin-top: 40px;
+    ul{
+        color: whitesmoke;
+        padding: 10px;
+        .list__img{
+            width: 50%;
+            >img{
+               
+                margin-bottom: 10px;
+            }
+
+        }
+        .list__items{
+            padding: 2px;
+
+        }
+    }
+      .marker_footer{
+        margin-right: 5px;
+      }  
+    
+}
