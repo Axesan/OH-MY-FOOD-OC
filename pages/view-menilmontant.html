@@ -21,10 +21,15 @@
 
     <main >
         
-            <h1>La palette du goût<i class="fa-regular fa-heart"></i></h1>
+            <h1>La palette du goût
+                <div>
+                    <i class="fa-regular fa-heart not_favoris"></i>
+                    <i class="fa-solid fa-heart add_favoris"></i>
+                </div>
+            </h1>
             <div class="contend">
+                <!-- Entree -->
                 <h3 class="title_command">Entrées</h3>
-
                     <ul class="bloc">
                         <li class="bloc__items">
 
@@ -32,11 +37,12 @@
                                 <h4>Fricassée d'escargot</h4>
                                 <p>Au piment d'espelette</p>
                             </div>
-                           
+                                <div class="price__body">
                                 <span class="price">25€</span>
                                 <div class="command_success">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </div>
+                            </div>
                       
                         </li>
                         <li class="bloc__items">
@@ -45,12 +51,12 @@
                                 <p>Et ses copeaux de truffe noire</p>
                             </div>
                             
-                           
+                            <div class="price__body">
                                 <span class="price">35€</span>
                                 <div class="command_success">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </div>
-                            
+                            </div>
                         </li>
                         <li class="bloc__items">
                             <div class="bloc__body">
@@ -59,17 +65,17 @@
                               
                             </div>
                             
-                            
+                            <div class="price__body">
                             <span class="price">20€</span>
                                 <div class="command_success">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </div>
+                            </div>
                             
                         </li>
-
-              
-
                     </ul>
+                <!-- EO Entree -->
+                    <!-- Plats -->
                     <h3 class="title_command mt">Plats</h3>
                     <ul class="bloc">
                         <li class="bloc__items">
@@ -78,11 +84,13 @@
                                 <h4>Filet de boeuf aux herbes</h4>
                                 <p>Accompagné de sa ribambelle de légumes</p>
                             </div>
-                           
-                                <span class="price">40€</span>
-                                <div class="command_success">
-                                    <i class="fa-solid fa-circle-check"></i>
-                                </div>
+
+                            <div class="price__body">
+                                    <span class="price">40€</span>
+                                    <div class="command_success">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                    </div>
+                            </div>
                       
                         </li>
                         <li class="bloc__items">
@@ -92,12 +100,12 @@
                                 <p>Et ses copeaux de truffe noire</p>
                             </div>
                             
-                           
+                            <div class="price__body">
                                 <span class="price">35€</span>
                                 <div class="command_success">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </div>
-                            
+                            </div>
                         </li>
                         <li class="bloc__items">
                             <div class="bloc__body">
@@ -106,17 +114,17 @@
                               
                             </div>
                             
-                            
-                            <span class="price">44€</span>
-                                <div class="command_success">
-                                    <i class="fa-solid fa-circle-check"></i>
-                                </div>
+                            <div class="price__body">
+                                <span class="price">44€</span>
+                                    <div class="command_success">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                    </div>
+                            </div>
                             
                         </li>
-
-              
-
                     </ul>
+                    <!-- EO Plats -->
+                    <!-- Desserts -->
                     <h3 class="title_command mt">Dessert</h3>
                     <ul class="bloc">
                         <li class="bloc__items">
@@ -125,13 +133,14 @@
                                 <h4>Fricassée d'escargot</h4>
                                 <p>Au piment d'espelette</p>
                             </div>
-                           
+
+                            <div class="price__body">
                                 <span class="price">25€</span>
 
                                 <div class="command_success">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </div>
-                      
+                            </div>
                         </li>
                         <li class="bloc__items">
                             <div class="bloc__body">
@@ -139,12 +148,13 @@
                                 <p>Et ses copeaux de truffe noire</p>
                             </div>
                             
-                           
+                            <div class="price__body">
                                 <span class="price">35€</span>
 
                                 <div class="command_success">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </div>
+                            </div>
                             
                         </li>
                         <li class="bloc__items">
@@ -154,17 +164,18 @@
                               
                             </div>
                             
-                            
+                            <div class="price__body">
                             <span class="price">20€</span>
                                 <div class="command_success">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </div>
-                            
+                            </div>
                         </li>
-
-              
-
                     </ul>
+                    <!-- EO Desserts -->
+                    <div class="btn_command_bloc">
+                        <button class="btn --reserve">Commander</button>
+                    </div>
             </div>
         
     </main>
