@@ -59,6 +59,41 @@ header{
     background-size: 100%;
     padding: 20%;
 }
+// Button
+.btn_command_bloc{ 
+    text-align: center;
+.btn{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.--reserve{
+    background: linear-gradient(to top,#9356DC , #FF79DA);
+    padding: 25px;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-weight:  900;
+    font-size: 15px;
+    box-shadow: 6px 6px 6px #dfdfdf;
+    width: 80%;
+ &:hover{
+    background:linear-gradient(to bottom,#9256dc88 , #ff79d995) ;
+    transition: 0.7s;
+ }
+}
+}
+
+// ------ANIMATIONS------
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
 
 // main 
 main{
@@ -72,6 +107,36 @@ main{
         display: flex;
         justify-content: space-between;
         font-weight: 900;
+        align-items: center;
+        div{
+            cursor: pointer;
+            font-size: 25px;
+            .add_favoris{
+                
+                display: none;
+                
+                
+             }
+           &:hover{
+                .add_favoris{
+                    display: block;
+                  
+                   
+                    color: #9c47fc;
+                    background: -webkit-linear-gradient(#9256dcc1, #ff79d995);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+    
+                }
+                .not_favoris{
+                    display: none;
+                     transition: 5.2s;
+                }
+            }
+    
+          
+        }
+        
     }
 
     .contend{
@@ -93,25 +158,47 @@ main{
             cursor: pointer;
 
             &:hover{
-                color: #9356DC;
+                
+                .command_success{
+                    width: 65px ;
+                    transition: 1.5s;
+                    i{
+                        background-color: red;
+                        animation: rotation 1.5s ;
+                       
+                    }
+                    
+                }
             }
             .bloc__body{
-                margin: 20px;
                 font-size: smaller;
-            }.command_success{
+                margin-left: 15px;
+            } .price__body{
+
+                    display: flex;
+                    align-items: center;
+             
+                    
+            }
+            
+            .command_success{
                  
                 cursor: pointer;
                 background-color: #66ff99;
                 border-radius: 0px 20px 20px 0px;
-                display: none;
+                width: 0px;
+               
             }
             .price{
                 font-weight: bold;
                 padding: 10px;
+                
             }
             i{
-               
+                width: 0px;
                 margin: 25px;
+                color: white;
+               
             }
             
             p{

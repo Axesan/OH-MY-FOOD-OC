@@ -10465,6 +10465,47 @@ header .header__img {
   padding: 20%;
 }
 
+.btn_command_bloc {
+  text-align: center;
+}
+.btn_command_bloc .btn {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn_command_bloc .--reserve {
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  padding: 25px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  font-weight: 900;
+  font-size: 15px;
+  box-shadow: 6px 6px 6px #dfdfdf;
+  width: 80%;
+}
+.btn_command_bloc .--reserve:hover {
+  background: linear-gradient(to bottom, rgba(146, 86, 220, 0.5333333333), rgba(255, 121, 217, 0.5843137255));
+  transition: 0.7s;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
 main {
   background-color: whitesmoke;
   border-radius: 30px;
@@ -10476,6 +10517,25 @@ main h1 {
   display: flex;
   justify-content: space-between;
   font-weight: 900;
+  align-items: center;
+}
+main h1 div {
+  cursor: pointer;
+  font-size: 25px;
+}
+main h1 div .add_favoris {
+  display: none;
+}
+main h1 div:hover .add_favoris {
+  display: block;
+  color: #9c47fc;
+  background: -webkit-linear-gradient(rgba(146, 86, 220, 0.7568627451), rgba(255, 121, 217, 0.5843137255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+main h1 div:hover .not_favoris {
+  display: none;
+  transition: 5.2s;
 }
 main .contend {
   margin-top: 50px;
@@ -10494,25 +10554,37 @@ main .contend .bloc .bloc__items {
   box-shadow: 6px 6px 6px #dfdfdf;
   cursor: pointer;
 }
-main .contend .bloc .bloc__items:hover {
-  color: #9356DC;
+main .contend .bloc .bloc__items:hover .command_success {
+  width: 65px;
+  transition: 1.5s;
+}
+main .contend .bloc .bloc__items:hover .command_success i {
+  background-color: red;
+  -webkit-animation: rotation 1.5s;
+          animation: rotation 1.5s;
 }
 main .contend .bloc .bloc__items .bloc__body {
-  margin: 20px;
   font-size: smaller;
+  margin-left: 15px;
+}
+main .contend .bloc .bloc__items .price__body {
+  display: flex;
+  align-items: center;
 }
 main .contend .bloc .bloc__items .command_success {
   cursor: pointer;
   background-color: #66ff99;
   border-radius: 0px 20px 20px 0px;
-  display: none;
+  width: 0px;
 }
 main .contend .bloc .bloc__items .price {
   font-weight: bold;
   padding: 10px;
 }
 main .contend .bloc .bloc__items i {
+  width: 0px;
   margin: 25px;
+  color: white;
 }
 main .contend .bloc .bloc__items p {
   font-weight: lighter;

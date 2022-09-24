@@ -10583,6 +10583,24 @@ main .reservation .--reserve:hover {
   color: #000;
 }
 
+.favoris {
+  cursor: pointer;
+  font-size: x-large;
+}
+.favoris:hover .add_favoris {
+  display: block;
+}
+.favoris:hover .not_favoris {
+  display: none;
+}
+.favoris .add_favoris {
+  color: #9356DC;
+  background: -webkit-linear-gradient(rgba(146, 86, 220, 0.7568627451), rgba(255, 121, 217, 0.5843137255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: none;
+}
+
 footer {
   margin-top: 40px;
 }
