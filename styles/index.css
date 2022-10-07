@@ -10492,14 +10492,14 @@ header {
   box-shadow: 10px 0px 10px;
 }
 header .header__img {
-  width: 20%;
+  width: 30%;
   padding: 15px;
 }
 
 .link {
   text-align: center;
   padding: 20px;
-  background: rgba(163, 163, 163, 0.688);
+  background: rgba(209, 208, 208, 0.688);
   margin-bottom: 10px;
 }
 .link .link__items {
