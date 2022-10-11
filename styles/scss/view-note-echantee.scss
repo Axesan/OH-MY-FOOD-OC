@@ -6,30 +6,71 @@ $color_multi: linear-gradient(to bottom,#9356DC , #FF79DA);
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 // fontawesome 
-@import "./fontawesome/scss/fontawesome.scss";
-@import "./fontawesome/scss/solid.scss";
-@import "./fontawesome/scss/brands.scss";
-@import "./fontawesome/scss/regular.scss";
 
 *{
     font-family: 'Roboto';
 }
 
-// Loader 
-.loader {
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid #9356DC;
-    width: 120px;
-    height: 120px;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
-    animation: spin 2s linear infinite;
-  }
+
   // Anim loader
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
+  @keyframes loaderNone {
+        from {
+            opacity: 100%;
+           
+            
+        }50%{
+            opacity: 50%;
+            display: none;
+        } 
+       
+  }
+
+  
+  .contend_loader{
+    width: 100%;
+    background-color: #66ff99;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    opacity: 0%;
+    animation: loaderNone 5s ;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+    
+    // Loader 
+    >span{
+        font-weight: bold;
+        text-transform: uppercase;
+        border-radius: 10px;
+        text-align: center;
+        padding: 10px;
+        background-color: #007a2996;
+        color: white;
+        display: flex;
+        align-items: center;
+        .loader {
+            border: 6px solid #f1ecec;
+            border-radius: 50%;
+            border-top: 6px solid #66ff99;
+            width: 20px;
+            height: 20px;
+            -webkit-animation: spin 2s linear infinite; /* Safari */
+            animation: spin 2s linear infinite;
+            
+            margin-left: 10px;
+            
+            
+          }
+  }
+    
+  }
+ 
   // Anime apparition 
 @keyframes apparitionBloc {
     0%{
@@ -151,6 +192,7 @@ main{
         background-color: white;
         border-radius: 15px;    
         font-weight: bold;
+        animation: apparitionBloc 1s;
         
     .bloc__items--link {
         text-decoration: none;
@@ -159,8 +201,8 @@ main{
         color: white;
         background-color: #9356DC;
         padding: 5px;
-        padding-right: 8px;
-        padding-left: 8px;
+        padding-right: 10px;
+        padding-left: 10px;
         border-radius: 100%;
        margin-left: -20px
     }>i{

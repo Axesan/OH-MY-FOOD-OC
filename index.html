@@ -5,16 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles/index.css" type="text/css">    <link rel="shortcut icon" href="./img/ohmyfood.svg" type="image/x-icon">
     <title>Oh myfood</title>
 </head>
 <body>
-    <!-- Loader -->
-    <div class="loader" style="display: none;"></div>
-    <header>
-    
-            <img class="header__img" src="./img/ohmyfood.svg" alt="ohmyfood">
+   <!--  Loader -->
+    <div class="contend_loader">
         
+        <span>Veuillez patienter ...<div class="loader"></div></span>
+    </div>
+
+
+    <header>    
+        <img class="header__img" src="./img/ohmyfood.svg" alt="ohmyfood">        
     </header>
 
     <div class="link">
@@ -33,19 +37,19 @@
             <div class="main__bloc">
                 <h2>Fonctionnement</h2>
                 <!-- Items block -->
-                <ul class="bloc">
-                    <li class="bloc__items"><a class="bloc__items--link" href="#"><span class="number__choice">1</span><i class="fa-solid fa-mobile-screen-button"></i>Choissisez un restaurant</a></li>
-                    <li class="bloc__items"><a class="bloc__items--link" href="#"><span class="number__choice">2</span><i class="fa-solid fa-list-ul"></i>Composez votre  menu</a></li>
-                    <li class="bloc__items"><a class="bloc__items--link" href="#"><span class="number__choice">3</span><i class="fa-solid fa-store --pink"></i>Dégustez au restaurant</a></li>
-                </ul>
+                <div class="bloc">
+                    <div class="bloc__items"><a class="bloc__items--link" href="#"><span class="number__choice">1</span><i class="fa-solid fa-mobile-screen-button"></i>Choissisez un restaurant</a></div>
+                    <div class="bloc__items"><a class="bloc__items--link" href="#"><span class="number__choice">2</span><i class="fa-solid fa-list-ul"></i>Composez votre  menu</a></div>
+                    <div class="bloc__items"><a class="bloc__items--link" href="#"><span class="number__choice">3</span><i class="fa-solid fa-store --pink"></i>Dégustez au restaurant</a></div>
+                </div>
                 <!-- [EO]-Items block -->
             </div>
 
             <div class="restaurant">
                 <h2>Restaurants</h2>
                 <!-- Restaurants card -->
-                <ul class="card__bloc">
-                    <li class="card">
+                <div class="card__bloc">
+                    <div class="card">
                         <img class="card__img" src="./img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
                         <span>Nouveau</span>    
                         <div class="card__body">
@@ -59,9 +63,9 @@
                             </div>
                         </div>
 
-                    </li>
+                    </div>
 
-                    <li class="card">
+                    <div class="card">
                         <img class="card__img" src="./img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
                         <span>Nouveau</span>
 
@@ -77,25 +81,25 @@
                             </div>
                         </div>
 
-                    </li>
+                    </div>
 
-                    <li class="card">
-                        <img class="card__img" src="./img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+                    <div class="card">
+                        <img class="card__img" src="./img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">                        
                         <div class="card__body">
                             <a class="card_link" href="./pages/view-francais.html">
                                 <h3 class="card__title">A la française</h3>
-                                <p class=" --light">Cité rouge</p>
+                                <p class="--light">Cité rouge</p>
                             </a>
                             
                             <div class="favoris">
-                                <i class="fa-regular fa-heart   not_favoris"></i>
+                                <i class="fa-regular fa-heart not_favoris"></i>
                                 <i class="fa-solid fa-heart add_favoris"></i>
                             </div>
                         </div>
 
-                    </li>
+                    </div>
 
-                    <li class="card">
+                    <div class="card">
                         <img class="card__img" src="./img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
                         <div class="card__body">
                             <a class="card_link" href="./pages/view-delice-sens.html">
@@ -109,17 +113,16 @@
                             </div>
                         </div>
 
-                    </li>
+                    </div>
 
                   
-                </ul>
-                    <!-- Restaurants card -->
+                </div>
+                <!-- Restaurants card -->
 
             </div>
             
         </div>
     </main>
-
 
     <footer>
         <div class="container --dark">
@@ -132,19 +135,6 @@
                 <li class="list__items">Contact</li>
         </ul>
         </div>
-
-        <script>
-            var myVar;
-            
-            function myFunction() {
-              myVar = setTimeout(showPage, 3000);
-            }
-            
-            function showPage() {
-              document.getElementById("loader").style.display = "none";
-              document.getElementById("myDiv").style.display = "block";
-            }
-            </script>
     </footer>
 </body>
 </html>

@@ -20,12 +20,9 @@ $bg-grey: rgba(163, 163, 163, 0.688);
 @keyframes apparitionBloc {
     0%{
         opacity: 0;
-
-        
     }
     100%{
         opacity: 100%;
-        
     }
 }
 
@@ -60,8 +57,7 @@ header{
     }
 }
 .background_img{
-    
-    background-image: url("../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background-image: url("../img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
     background-position: center center;
     object-fit:cover;
     background-size: 100%;
@@ -174,14 +170,9 @@ main{
             border-radius: 20px;
             margin-top: 10px;
             box-shadow: 6px 6px 6px #dfdfdf;
-            animation : apparitionBloc;
-            animation-fill-mode: forwards;
-            animation-delay: 1s;
-
+            animation: success 1.2;
             cursor: pointer;
             width: 30%;
-            opacity: 100%;
-
 
             &:hover{
                 
