@@ -72,12 +72,15 @@ $color_multi: linear-gradient(to bottom,#9356DC , #FF79DA);
   }
  
   // Anime apparition 
-@keyframes apparitionBloc {
+  @keyframes apparitionBloc {
     0%{
         opacity: 0;
+        margin-top: -25px;
+       
     }
     100%{
         opacity: 100%;
+        
     }
 }
 
@@ -192,7 +195,7 @@ main{
         background-color: white;
         border-radius: 15px;    
         font-weight: bold;
-        animation: apparitionBloc 1s;
+        animation: apparitionBloc 3s;
         
     .bloc__items--link {
         text-decoration: none;

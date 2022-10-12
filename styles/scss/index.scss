@@ -25,7 +25,9 @@ $color_multi: linear-gradient(to bottom,#9356DC , #FF79DA);
             
         }50%{
             opacity: 50%;
-        } 
+        }100%{
+            opacity: 25%;
+        }
        
   }
   
@@ -36,7 +38,7 @@ $color_multi: linear-gradient(to bottom,#9356DC , #FF79DA);
     position: absolute;
     text-align: center;
     opacity: 0%;
-    animation: loaderNone 5s ;
+    animation: loaderNone 4s ;
     display: flex;
     align-items: center;
     padding-left: 10%;

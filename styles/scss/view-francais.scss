@@ -16,13 +16,15 @@ $bg-grey: rgba(163, 163, 163, 0.688);
 .mt { 
     margin-top: 45px;
 }
-// animation 
 @keyframes apparitionBloc {
     0%{
         opacity: 0;
+        margin-top: -25px;
+       
     }
     100%{
         opacity: 100%;
+        
     }
 }
 
@@ -170,7 +172,7 @@ main{
             border-radius: 20px;
             margin-top: 10px;
             box-shadow: 6px 6px 6px #dfdfdf;
-            animation: success 1.2;
+            animation: apparitionBloc 3s;
             cursor: pointer;
             width: 30%;
 

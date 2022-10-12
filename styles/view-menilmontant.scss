@@ -16,18 +16,7 @@ $bg-grey: rgba(163, 163, 163, 0.688);
 .mt { 
     margin-top: 45px;
 }
-// animation 
-@keyframes apparitionBloc {
-    0%{
-        opacity: 0;
 
-        
-    }
-    100%{
-        opacity: 100%;
-        
-    }
-}
 
 .title_command{
     border-bottom: 2px solid #66ff99;
@@ -164,6 +153,18 @@ main{
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+        // animation 
+@keyframes apparitionBloc {
+    0%{
+        opacity: 0;
+        margin-top: -25px;
+       
+    }
+    100%{
+        opacity: 100%;
+        
+    }
+}
          
         .bloc__items{
 
@@ -174,9 +175,10 @@ main{
             border-radius: 20px;
             margin-top: 10px;
             box-shadow: 6px 6px 6px #dfdfdf;
-            animation : apparitionBloc;
-            animation-fill-mode: forwards;
-            animation-delay: 1s;
+            animation: apparitionBloc 3s ;
+            
+            
+           
 
             cursor: pointer;
             width: 30%;
