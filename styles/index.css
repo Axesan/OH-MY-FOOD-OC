@@ -20,6 +20,29 @@
     transform: rotate(360deg);
   }
 }
+@-webkit-keyframes BodyLoader {
+  from {
+    overflow-y: hidden;
+  }
+  to {
+    overflow-y: hidden;
+  }
+}
+@keyframes BodyLoader {
+  from {
+    overflow-y: hidden;
+  }
+  to {
+    overflow-y: hidden;
+  }
+}
+body {
+  overflow-x: hidden;
+  overflow-y: visible;
+  -webkit-animation: BodyLoader 5s;
+          animation: BodyLoader 5s;
+}
+
 @-webkit-keyframes loaderNone {
   from {
     opacity: 100%;
@@ -27,29 +50,33 @@
   50% {
     opacity: 50%;
   }
+  100% {
+    opacity: 25%;
+  }
 }
+
 @keyframes loaderNone {
   from {
     opacity: 100%;
-    visibility: visible;
   }
   50% {
     opacity: 50%;
-    visibility: visible;
+  }
+  100% {
+    opacity: 25%;
   }
 }
 .contend_loader {
-  width: 90%;
+  width: 100%;
   background-color: #66ff99;
   height: 100%;
   position: absolute;
   text-align: center;
   opacity: 0%;
-  -webkit-animation: loaderNone 5s;
-          animation: loaderNone 5s;
+  -webkit-animation: loaderNone 4s;
+          animation: loaderNone 4s;
   display: flex;
   align-items: center;
-  visibility: hidden;
   padding-left: 10%;
 }
 .contend_loader > span {
@@ -155,7 +182,7 @@ main .reservation p {
   font-weight: lighter;
 }
 main .reservation .--reserve {
-  background: linear-gradient(to top,#9356DC , #FF79DA);;
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
   padding: 25px;
   border-radius: 50px;
   border: none;
@@ -292,9 +319,6 @@ footer .marker_footer {
 }
 
 @media (max-width: 768px) {
-  .contend_loader{
-    width: 90% !important;
-  }
   header .header__img {
     width: 90%;
     padding: 15px;
@@ -327,10 +351,9 @@ footer .marker_footer {
     left: 75%;
   }
 }
-@media (max-width: 948px) {
+@media (max-width: 1024px) {
   .card {
     border-radius: 20px;
-    box-shadow: 6px 6px 6px #dfdfdf;
     margin-top: 15px;
     width: 45%;
   }

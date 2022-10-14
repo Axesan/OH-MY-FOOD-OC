@@ -26,9 +26,7 @@
   }
   50% {
     opacity: 50%;
-  }
-  100% {
-    opacity: 25%;
+    display: none;
   }
 }
 @keyframes loaderNone {
@@ -37,9 +35,7 @@
   }
   50% {
     opacity: 50%;
-  }
-  100% {
-    opacity: 25%;
+    display: none;
   }
 }
 .contend_loader {
@@ -49,8 +45,8 @@
   position: absolute;
   text-align: center;
   opacity: 0%;
-  -webkit-animation: loaderNone 4s;
-          animation: loaderNone 4s;
+  -webkit-animation: loaderNone 5s;
+          animation: loaderNone 5s;
   display: flex;
   align-items: center;
   padding-left: 10%;
@@ -80,6 +76,7 @@
 @-webkit-keyframes apparitionBloc {
   0% {
     opacity: 0;
+    margin-top: -25px;
   }
   100% {
     opacity: 100%;
@@ -89,6 +86,7 @@
 @keyframes apparitionBloc {
   0% {
     opacity: 0;
+    margin-top: -25px;
   }
   100% {
     opacity: 100%;
@@ -185,6 +183,8 @@ main .reservation .--reserve:hover {
   background-color: white;
   border-radius: 15px;
   font-weight: bold;
+  -webkit-animation: apparitionBloc 3s;
+          animation: apparitionBloc 3s;
 }
 .main__bloc .bloc .bloc__items .bloc__items--link {
   text-decoration: none;
@@ -337,4 +337,4 @@ footer .marker_footer {
   .card > span {
     left: 75% !important;
   }
-}/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=view-note-echantee.css.map */

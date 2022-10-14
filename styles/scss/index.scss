@@ -18,6 +18,20 @@ $color_multi: linear-gradient(to bottom,#9356DC , #FF79DA);
     100% { transform: rotate(360deg); }
   }
 
+  @keyframes BodyLoader {
+    from{
+      overflow-y: hidden;  
+    }to{
+        overflow-y: hidden;
+    }
+}
+
+body{
+    overflow-x: hidden;
+    overflow-y: visible ;
+    animation: BodyLoader 5s;
+}
+
   @keyframes loaderNone {
         from {
             opacity: 100%;
@@ -384,14 +398,16 @@ footer{
             }
         }
     }
+    .contend_loader{
+
+    }
     
 }
 
 // Tablet
-@media (max-width: 948px) { 
+@media (max-width: 1024px) { 
     .card{
         border-radius: 20px;
-        box-shadow: 6px 6px 6px #dfdfdf;
         margin-top: 15px;
         width: 45%;
     >span{

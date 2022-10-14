@@ -11,6 +11,25 @@
   margin-top: 45px;
 }
 
+@-webkit-keyframes apparitionBloc {
+  0% {
+    opacity: 0;
+    margin-top: -25px;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes apparitionBloc {
+  0% {
+    opacity: 0;
+    margin-top: -25px;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
 .title_command {
   border-bottom: 2px solid #66ff99;
   width: 65px;
@@ -26,7 +45,6 @@ header {
   box-shadow: 10px 0px 10px;
 }
 header i {
-  font-size: x-large;
   position: relative;
   right: 50px;
   cursor: pointer;
@@ -41,7 +59,7 @@ header .header__img {
 }
 
 .background_img {
-  background-image: url("../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-image: url("../img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
   background-position: center center;
   -o-object-fit: cover;
      object-fit: cover;
@@ -57,7 +75,7 @@ header .header__img {
   margin-left: auto;
   margin-right: auto;
 }
-.btn_command_bloc .reserve {
+.btn_command_bloc .--reserve {
   background: linear-gradient(to top, #9356DC, #FF79DA);
   padding: 25px;
   border-radius: 50px;
@@ -66,9 +84,9 @@ header .header__img {
   font-weight: 900;
   font-size: 15px;
   box-shadow: 6px 6px 6px #dfdfdf;
-  width: 35%;
+  width: 80%;
 }
-.btn_command_bloc .reserve:hover {
+.btn_command_bloc .--reserve:hover {
   background: linear-gradient(to bottom, rgba(146, 86, 220, 0.5333333333), rgba(255, 121, 217, 0.5843137255));
   transition: 0.7s;
 }
@@ -149,24 +167,6 @@ main .contend .bloc {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-@-webkit-keyframes apparitionBloc {
-  0% {
-    opacity: 0;
-    margin-top: -25px;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
-@keyframes apparitionBloc {
-  0% {
-    opacity: 0;
-    margin-top: -25px;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
 main .contend .bloc .bloc__items {
   background-color: white;
   display: flex;
@@ -179,7 +179,6 @@ main .contend .bloc .bloc__items {
           animation: apparitionBloc 3s;
   cursor: pointer;
   width: 30%;
-  opacity: 100%;
 }
 main .contend .bloc .bloc__items:hover .command_success {
   width: 65px;
@@ -191,11 +190,8 @@ main .contend .bloc .bloc__items:hover .command_success i {
   display: block;
 }
 main .contend .bloc .bloc__items .bloc__body {
-  font-size: medium;
+  font-size: smaller;
   margin-left: 15px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 main .contend .bloc .bloc__items .price__body {
   display: flex;
@@ -221,8 +217,6 @@ main .contend .bloc .bloc__items i {
 }
 main .contend .bloc .bloc__items p {
   font-weight: lighter;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 
 footer {
@@ -245,14 +239,6 @@ footer .marker_footer {
   margin-right: 5px;
 }
 
-@media (max-width: 1024px) {
-  .bloc {
-    justify-content: center;
-  }
-  .bloc__items {
-    width: 49% !important;
-  }
-}
 @media (max-width: 768px) {
   .contend {
     margin-left: 0 !important;
@@ -264,10 +250,4 @@ footer .marker_footer {
   .bloc__items {
     width: 100% !important;
   }
-  .reserve {
-    width: 80% !important;
-  }
-  .bloc__body {
-    font-size: smaller !important;
-  }
-}/*# sourceMappingURL=view-menilmontant.css.map */
+}/*# sourceMappingURL=view-delice-sens.css.map */

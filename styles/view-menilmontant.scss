@@ -33,6 +33,7 @@ header{
     text-align: center;
     box-shadow: 10px 0px 10px;
     i{
+        font-size: x-large;
         position: relative;
         right: 50px;
         cursor: pointer;
@@ -64,7 +65,7 @@ header{
     margin-left: auto;
     margin-right: auto;
 }
-.--reserve{
+.reserve{
     background: linear-gradient(to top,#9356DC , #FF79DA);
     padding: 25px;
     border-radius: 50px;
@@ -73,7 +74,7 @@ header{
     font-weight:  900;
     font-size: 15px;
     box-shadow: 6px 6px 6px #dfdfdf;
-    width: 80%;
+    width: 35%;
  &:hover{
     background:linear-gradient(to bottom,#9256dc88 , #ff79d995) ;
     transition: 0.7s;
@@ -202,8 +203,11 @@ main{
             } 
          
             .bloc__body{
-                font-size: smaller;
+                font-size: medium;
                 margin-left: 15px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
                 
             } .price__body{
 
@@ -238,6 +242,8 @@ main{
             
             p{
                 font-weight: lighter;
+                text-overflow: ellipsis;
+                overflow: hidden;
             }
         }
 
@@ -271,6 +277,20 @@ footer{
     
 }
 
+
+
+// Tablet
+@media (max-width: 1024px) { 
+    .bloc{
+        justify-content: center;
+    }
+    .bloc__items{
+        width: 49% !important;
+    }
+   
+}
+
+
 // Format téléphone
 @media (max-width:768px) {
 
@@ -287,11 +307,13 @@ footer{
         width: 100% !important;
     }
     
+    .reserve{
+        width: 80% !important;
+    }
+    .bloc__body{
+        font-size: smaller !important;
+    }
+    
 
 }
 
-// Tablet
-@media (max-width: 915px) { 
-
-
- }
