@@ -3,6 +3,9 @@
   font-family: "Roboto";
   
 }
+body{
+  overflow-x: hidden;
+}
 
 @-webkit-keyframes spin {
   0% {
