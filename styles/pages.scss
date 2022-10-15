@@ -10,23 +10,17 @@ $bg-grey: rgba(163, 163, 163, 0.688);
 *{
     font-family: 'Roboto';
 }
-.--dark{
+.dark{
     background-color: rgb(31, 29, 29);
 }
 .mt { 
     margin-top: 45px;
 }
-@keyframes apparitionBloc {
-    0%{
-        opacity: 0;
-        margin-top: -25px;
-       
-    }
-    100%{
-        opacity: 100%;
-        
-    }
+
+body{
+    overflow-x: hidden;
 }
+
 
 .title_command{
     border-bottom: 2px solid #66ff99;
@@ -42,11 +36,18 @@ header{
     width: 100%;
     text-align: center;
     box-shadow: 10px 0px 10px;
-    i{
-        position: relative;
-        right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    text-align: center;
+    a{
+       
+       
         cursor: pointer;
         color: #000;
+        text-decoration: none;
+        margin-right: 55px;
+        font-size: x-large;
         &:hover{
             color: #9356DC;
         }
@@ -54,16 +55,17 @@ header{
 
     .header__img{
        width: 30%;
-       padding: 15px;
-      
+       padding-top: 15px;
+       padding-bottom: 15px;      
     }
 }
-.background_img{
-    background-image: url("../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-    background-position: center center;
-    object-fit:cover;
-    background-size: 100%;
-    padding: 20%;
+
+// img background
+.restau_img{
+    max-width: 100%;
+    max-height: 32em;
+    width: 100%;
+    object-fit: cover;
 }
 // Button
 .btn_command_bloc{ 
@@ -73,7 +75,7 @@ header{
     margin-left: auto;
     margin-right: auto;
 }
-.--reserve{
+.reserve{
     background: linear-gradient(to top,#9356DC , #FF79DA);
     padding: 25px;
     border-radius: 50px;
@@ -82,7 +84,7 @@ header{
     font-weight:  900;
     font-size: 15px;
     box-shadow: 6px 6px 6px #dfdfdf;
-    width: 80%;
+    width: 35%;
  &:hover{
     background:linear-gradient(to bottom,#9256dc88 , #ff79d995) ;
     transition: 0.7s;
@@ -119,7 +121,7 @@ main{
         justify-content: space-between;
         font-weight: 900;
         align-items: center;
-        div{
+        span{
             cursor: pointer;
             font-size: 25px;
             .add_favoris{
@@ -162,6 +164,18 @@ main{
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+        // animation 
+@keyframes apparitionBloc {
+    0%{
+        opacity: 0;
+        margin-top: -25px;
+       
+    }
+    100%{
+        opacity: 100%;
+        
+    }
+}
          
         .bloc__items{
 
@@ -172,9 +186,15 @@ main{
             border-radius: 20px;
             margin-top: 10px;
             box-shadow: 6px 6px 6px #dfdfdf;
-            animation: apparitionBloc 3s;
+            animation: apparitionBloc 3s ;
+            
+            
+           
+
             cursor: pointer;
             width: 30%;
+            opacity: 100%;
+
 
             &:hover{
                 
@@ -193,8 +213,11 @@ main{
             } 
          
             .bloc__body{
-                font-size: smaller;
+                font-size: medium;
                 margin-left: 15px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
                 
             } .price__body{
 
@@ -229,6 +252,8 @@ main{
             
             p{
                 font-weight: lighter;
+                text-overflow: ellipsis;
+                overflow: hidden;
             }
         }
 
@@ -262,9 +287,32 @@ footer{
     
 }
 
+
+
+// Tablet
+@media (max-width: 1024px) { 
+    .bloc{
+        justify-content: center;
+    }
+    .bloc__items{
+        width: 49% !important;
+    }
+   
+}
+
+
 // Format téléphone
 @media (max-width:768px) {
-
+    header{
+      
+        a{
+           
+        margin-right: 15px;
+           font-size: medium;
+        }
+    
+      
+    }
     .contend{
         margin-left: 0 !important;
         margin-right: 0 !important;
@@ -278,11 +326,13 @@ footer{
         width: 100% !important;
     }
     
+    .reserve{
+        width: 80% !important;
+    }
+    .bloc__body{
+        font-size: smaller !important;
+    }
+    
 
 }
 
-// Tablet
-@media (max-width: 915px) { 
-
-
- }

@@ -39,8 +39,8 @@
 body {
   overflow-x: hidden;
   overflow-y: visible;
-  -webkit-animation: BodyLoader 5s;
-          animation: BodyLoader 5s;
+  -webkit-animation: BodyLoader 4s;
+          animation: BodyLoader 4s;
 }
 
 @-webkit-keyframes loaderNone {
@@ -68,7 +68,7 @@ body {
 }
 .contend_loader {
   width: 100%;
-  background-color: #66ff99;
+  background-color: #dfdfdf;
   height: 100%;
   position: absolute;
   text-align: center;
@@ -77,23 +77,22 @@ body {
           animation: loaderNone 4s;
   display: flex;
   align-items: center;
-  padding-left: 10%;
+  padding-left: 45%;
 }
-.contend_loader > span {
+.contend_loader > div {
   font-weight: bold;
   text-transform: uppercase;
   border-radius: 10px;
   text-align: center;
   padding: 10px;
-  background-color: rgba(0, 122, 41, 0.5882352941);
-  color: white;
+  color: #007a29;
   display: flex;
   align-items: center;
 }
-.contend_loader > span .loader {
+.contend_loader > div .loader {
   border: 6px solid #f1ecec;
   border-radius: 50%;
-  border-top: 6px solid #66ff99;
+  border-top: 6px solid #007a29;
   width: 20px;
   height: 20px;
   -webkit-animation: spin 2s linear infinite; /* Safari */
@@ -118,7 +117,7 @@ body {
     opacity: 100%;
   }
 }
-.--light {
+.light {
   font-weight: lighter;
 }
 
@@ -181,7 +180,7 @@ main .reservation p {
   font-size: larger;
   font-weight: lighter;
 }
-main .reservation .--reserve {
+main .reservation .reserve {
   background: linear-gradient(to bottom, #9356DC, #FF79DA);
   padding: 25px;
   border-radius: 50px;
@@ -192,7 +191,7 @@ main .reservation .--reserve {
   box-shadow: 6px 6px 6px #dfdfdf;
   width: 25%;
 }
-main .reservation .--reserve:hover {
+main .reservation .reserve:hover {
   background: linear-gradient(to bottom, rgba(146, 86, 220, 0.5333333333), rgba(255, 121, 217, 0.5843137255));
   transition: 0.7s;
 }
@@ -326,7 +325,7 @@ footer .marker_footer {
   main .reservation {
     margin-top: 40px;
   }
-  main .reservation .--reserve {
+  main .reservation .reserve {
     width: 100%;
   }
   .main__bloc {
@@ -358,6 +357,6 @@ footer .marker_footer {
     width: 45%;
   }
   .card > span {
-    left: 75% !important;
+    left: 70% !important;
   }
 }/*# sourceMappingURL=index.css.map */

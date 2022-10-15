@@ -1,13 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   font-family: "Roboto";
-  
-}
-body{
-  overflow-x: hidden;
 }
 
-.--dark {
+.dark {
   background-color: rgb(31, 29, 29);
 }
 
@@ -15,25 +11,10 @@ body{
   margin-top: 45px;
 }
 
-@-webkit-keyframes apparitionBloc {
-  0% {
-    opacity: 0;
-    margin-top: -25px;
-  }
-  100% {
-    opacity: 100%;
-  }
+body {
+  overflow-x: hidden;
 }
 
-@keyframes apparitionBloc {
-  0% {
-    opacity: 0;
-    margin-top: -25px;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
 .title_command {
   border-bottom: 2px solid #66ff99;
   width: 65px;
@@ -47,28 +28,33 @@ header {
   width: 100%;
   text-align: center;
   box-shadow: 10px 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-header i {
-  position: relative;
-  right: 50px;
+header a {
   cursor: pointer;
   color: #000;
+  text-decoration: none;
+  margin-right: 55px;
+  font-size: x-large;
 }
-header i:hover {
+header a:hover {
   color: #9356DC;
 }
 header .header__img {
   width: 30%;
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
-.background_img {
-  background-image: url("../img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-  background-position: center center;
+.restau_img {
+  max-width: 100%;
+  max-height: 32em;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  background-size: 100%;
-  padding: 20%;
 }
 
 .btn_command_bloc {
@@ -79,7 +65,7 @@ header .header__img {
   margin-left: auto;
   margin-right: auto;
 }
-.btn_command_bloc .--reserve {
+.btn_command_bloc .reserve {
   background: linear-gradient(to top, #9356DC, #FF79DA);
   padding: 25px;
   border-radius: 50px;
@@ -88,9 +74,9 @@ header .header__img {
   font-weight: 900;
   font-size: 15px;
   box-shadow: 6px 6px 6px #dfdfdf;
-  width: 80%;
+  width: 35%;
 }
-.btn_command_bloc .--reserve:hover {
+.btn_command_bloc .reserve:hover {
   background: linear-gradient(to bottom, rgba(146, 86, 220, 0.5333333333), rgba(255, 121, 217, 0.5843137255));
   transition: 0.7s;
 }
@@ -141,21 +127,21 @@ main h1 {
   font-weight: 900;
   align-items: center;
 }
-main h1 div {
+main h1 span {
   cursor: pointer;
   font-size: 25px;
 }
-main h1 div .add_favoris {
+main h1 span .add_favoris {
   display: none;
 }
-main h1 div:hover .add_favoris {
+main h1 span:hover .add_favoris {
   display: block;
   color: #9c47fc;
   background: -webkit-linear-gradient(rgba(146, 86, 220, 0.7568627451), rgba(255, 121, 217, 0.5843137255));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-main h1 div:hover .not_favoris {
+main h1 span:hover .not_favoris {
   display: none;
   transition: 5.2s;
 }
@@ -171,6 +157,24 @@ main .contend .bloc {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+@-webkit-keyframes apparitionBloc {
+  0% {
+    opacity: 0;
+    margin-top: -25px;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes apparitionBloc {
+  0% {
+    opacity: 0;
+    margin-top: -25px;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
 main .contend .bloc .bloc__items {
   background-color: white;
   display: flex;
@@ -183,6 +187,7 @@ main .contend .bloc .bloc__items {
           animation: apparitionBloc 3s;
   cursor: pointer;
   width: 30%;
+  opacity: 100%;
 }
 main .contend .bloc .bloc__items:hover .command_success {
   width: 65px;
@@ -194,8 +199,11 @@ main .contend .bloc .bloc__items:hover .command_success i {
   display: block;
 }
 main .contend .bloc .bloc__items .bloc__body {
-  font-size: smaller;
+  font-size: medium;
   margin-left: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 main .contend .bloc .bloc__items .price__body {
   display: flex;
@@ -221,6 +229,8 @@ main .contend .bloc .bloc__items i {
 }
 main .contend .bloc .bloc__items p {
   font-weight: lighter;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 footer {
@@ -243,7 +253,19 @@ footer .marker_footer {
   margin-right: 5px;
 }
 
+@media (max-width: 1024px) {
+  .bloc {
+    justify-content: center;
+  }
+  .bloc__items {
+    width: 49% !important;
+  }
+}
 @media (max-width: 768px) {
+  header a {
+    margin-right: 15px;
+    font-size: medium;
+  }
   .contend {
     margin-left: 0 !important;
     margin-right: 0 !important;
@@ -254,4 +276,10 @@ footer .marker_footer {
   .bloc__items {
     width: 100% !important;
   }
-}/*# sourceMappingURL=view-delice-sens.css.map */
+  .reserve {
+    width: 80% !important;
+  }
+  .bloc__body {
+    font-size: smaller !important;
+  }
+}/*# sourceMappingURL=pages.css.map */

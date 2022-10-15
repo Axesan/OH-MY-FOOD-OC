@@ -18,6 +18,20 @@ $color_multi: linear-gradient(to bottom,#9356DC , #FF79DA);
     100% { transform: rotate(360deg); }
   }
 
+  @keyframes BodyLoader {
+    from{
+      overflow-y: hidden;  
+    }to{
+        overflow-y: hidden;
+    }
+}
+
+body{
+    overflow-x: hidden;
+    overflow-y: visible ;
+    animation: BodyLoader 4s;
+}
+
   @keyframes loaderNone {
         from {
             opacity: 100%;
@@ -25,39 +39,39 @@ $color_multi: linear-gradient(to bottom,#9356DC , #FF79DA);
             
         }50%{
             opacity: 50%;
-            display: none;
-        } 
+        }100%{
+            opacity: 25%;
+        }
        
   }
-
   
   .contend_loader{
     width: 100%;
-    background-color: #66ff99;
+    background-color: #dfdfdf;
     height: 100%;
     position: absolute;
     text-align: center;
     opacity: 0%;
-    animation: loaderNone 5s ;
+    animation: loaderNone 4s ;
     display: flex;
     align-items: center;
-    padding-left: 10%;
+    padding-left: 45%;
     
     // Loader 
-    >span{
+    >div{
         font-weight: bold;
         text-transform: uppercase;
         border-radius: 10px;
         text-align: center;
         padding: 10px;
-        background-color: #007a2996;
-        color: white;
+        
+        color: #007a29;
         display: flex;
         align-items: center;
         .loader {
             border: 6px solid #f1ecec;
             border-radius: 50%;
-            border-top: 6px solid #66ff99;
+            border-top: 6px solid #007a29;
             width: 20px;
             height: 20px;
             -webkit-animation: spin 2s linear infinite; /* Safari */
@@ -72,21 +86,18 @@ $color_multi: linear-gradient(to bottom,#9356DC , #FF79DA);
   }
  
   // Anime apparition 
-  @keyframes apparitionBloc {
+@keyframes apparitionBloc {
     0%{
         opacity: 0;
-        margin-top: -25px;
-       
     }
     100%{
         opacity: 100%;
-        
     }
 }
 
 // Font 
 
-.--light{
+.light{
     font-weight: lighter;
 }
 // btn
@@ -159,7 +170,7 @@ main{
             font-weight: lighter
         }
 
-        .--reserve{
+        .reserve{
             background: linear-gradient(to bottom,#9356DC , #FF79DA);
             padding: 25px;
             border-radius: 50px;
@@ -195,7 +206,6 @@ main{
         background-color: white;
         border-radius: 15px;    
         font-weight: bold;
-        animation: apparitionBloc 3s;
         
     .bloc__items--link {
         text-decoration: none;
@@ -352,7 +362,7 @@ footer{
     main{
         .reservation{
             margin-top: 40px;
-            .--reserve{
+            .reserve{
                 width: 100%;
             }
         }
@@ -388,19 +398,21 @@ footer{
             }
         }
     }
+    .contend_loader{
+
+    }
     
 }
 
 // Tablet
-@media (max-width: 948px) { 
+@media (max-width: 1024px) { 
     .card{
         border-radius: 20px;
-        box-shadow: 6px 6px 6px #dfdfdf;
         margin-top: 15px;
         width: 45%;
     >span{
       
-        left: 75% !important;
+        left: 70% !important;
      
     }
     
