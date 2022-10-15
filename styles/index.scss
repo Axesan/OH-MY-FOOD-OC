@@ -35,12 +35,15 @@ body{
   @keyframes loaderNone {
         from {
             opacity: 100%;
+            visibility: visible;
            
             
         }50%{
             opacity: 50%;
+            visibility: visible;
         }100%{
             opacity: 25%;
+            visibility: visible;
         }
        
   }
@@ -55,7 +58,9 @@ body{
     animation: loaderNone 4s ;
     display: flex;
     align-items: center;
-    padding-left: 45%;
+    justify-content: center;
+    visibility: hidden;
+   
     
     // Loader 
     >div{
@@ -171,7 +176,7 @@ main{
         }
 
         .reserve{
-            background: linear-gradient(to bottom,#9356DC , #FF79DA);
+            background: linear-gradient(to top,#9356DC , #FF79DA);
             padding: 25px;
             border-radius: 50px;
             border: none;
@@ -398,9 +403,8 @@ footer{
             }
         }
     }
-    .contend_loader{
-
-    }
+    
+  
     
 }
 
@@ -415,11 +419,6 @@ footer{
         left: 70% !important;
      
     }
-    
-    
-
-
-    
-    
 }
+
 }
