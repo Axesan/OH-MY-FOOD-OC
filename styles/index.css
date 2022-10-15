@@ -138,11 +138,11 @@ body {
   padding-right: 15px;
 }
 
-.--dark {
+.dark {
   background-color: rgb(31, 29, 29);
 }
 
-.--pink {
+.pink {
   color: #9356DC;
 }
 
