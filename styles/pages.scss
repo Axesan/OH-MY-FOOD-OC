@@ -47,7 +47,7 @@ header{
         color: #000;
         text-decoration: none;
         margin-right: 55px;
-        font-size: x-large;
+       
         &:hover{
             color: #9356DC;
         }
@@ -286,7 +286,7 @@ footer{
       }  
     
 }
-
+ 
 
 
 // Tablet
@@ -306,9 +306,11 @@ footer{
     header{
       
         a{
-           
-        margin-right: 15px;
-           font-size: medium;
+           margin-right: 15px;
+           font-size: medium !important;
+        }
+        .header__img{
+            width: 50%;
         }
     
       

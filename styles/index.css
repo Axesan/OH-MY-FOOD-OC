@@ -366,4 +366,7 @@ footer .marker_footer {
   .card > span {
     left: 70% !important;
   }
+  .card .reserve {
+    width: 10px;
+  }
 }/*# sourceMappingURL=index.css.map */
