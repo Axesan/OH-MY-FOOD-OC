@@ -184,7 +184,7 @@ main{
             font-weight:  900;
             font-size: 15px;
             box-shadow: 6px 6px 6px #dfdfdf;
-            width: 25%;
+            width: 30%;
          &:hover{
             background:linear-gradient(to bottom,#9256dc88 , #ff79d995) ;
             transition: 0.7s;
@@ -353,7 +353,7 @@ footer{
     
 }
 
-
+// telephone
 @media (max-width:768px) {
   // Header
     header{
@@ -403,10 +403,12 @@ footer{
             }
         }
     }
-    
+     
   
     
 }
+
+
 
 // Tablet
 @media (max-width: 1024px) { 
